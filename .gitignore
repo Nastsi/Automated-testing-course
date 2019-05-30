@@ -3,3 +3,7 @@
 *.db
 target/
 bin/
+/TODO
+build/
+doc/*.txt
+doc/**/*.pdf
