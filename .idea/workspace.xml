@@ -164,7 +164,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.AppTest">
+  <component name="RunManager" selected="JUnit.AppTest">
     <configuration name="AppTest" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.beetsoft.automated.AppTest" />
       <module name="Automated-testing-course" />
@@ -182,7 +182,9 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.beetsoft.automated" />
       <option name="MAIN_CLASS_NAME" value="com.beetsoft.automated.AppTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="PARAMETERS" value="" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
