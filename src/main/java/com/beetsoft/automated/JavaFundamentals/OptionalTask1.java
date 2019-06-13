@@ -30,12 +30,17 @@ public class OptionalTask1 {
     public static void main(String[] args)
     {
         //Task 1
+        System.out.println("Task 1");
         if (args.length != 0) task1();
+        System.out.println();
 
         //Task 2
+        System.out.println("Task 2");
         task2(args);
+        System.out.println();
 
         //Task 3
+        System.out.println("Task 3");
         Scanner in = new Scanner(System.in);
         System.out.println();
         System.out.println("Введите количество чисел, которое необходимо отобразить");
