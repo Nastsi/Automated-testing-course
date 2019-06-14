@@ -5,6 +5,57 @@ import java.util.Scanner;
 
 public class OptionalTask4 {
 
+    public static void task2(int[][] matr, int n)
+    {
+        int countResult = 0;
+
+        for (int i = 0; i < n; i++)
+        {
+            int count = 0;
+
+            for (int j = 1; j < n; j++)
+            {
+                if (count > countResult)
+                {
+                    countResult = count;
+                }
+
+                if (matr[i][j - 1] < matr[i][j])
+                {
+                    count++;
+                }
+                else if (matr[i][j - 1] > matr[i][j])
+                {
+                    count = 0;
+                }
+            }
+        }
+
+        for (int i = 1; i < n; i++)
+        {
+            int count = 0;
+
+            for (int j = 0; j < n; j++)
+            {
+                if (count > countResult)
+                {
+                    countResult = count;
+                }
+
+                if (matr[i - 1][j] < matr[i][j])
+                {
+                    count++;
+                }
+                else if (matr[i - 1][j] > matr[i][j])
+                {
+                    count = 0;
+                }
+            }
+        }
+
+        System.out.println("Наибольшее число возрастающих элементов матрицы: " + countResult);
+    }
+
     public static void task3(int[][] matr, int n)
     {
         int sum = 0;
@@ -55,6 +106,11 @@ public class OptionalTask4 {
                 matr[i][j] = random.nextInt(M * 2) - M;
             }
         }
+
+        //task 2
+        System.out.println("Task 2");
+        task2(matr, n);
+        System.out.println();
 
         //task 3
         System.out.println("Task 3");
