@@ -171,6 +171,39 @@ public class OptionalTask2 {
         System.out.println();
     }
 
+    public static void task5(int[] numbers)
+    {
+        int evenNumerals = 0;
+        int symmetricalNumerals = 0;
+
+        for (int i = 0; i < numbers.length; i++)
+        {
+            int element = numbers[i];
+            int numeral;
+            int oddNums = 0;
+            int evensNum = 0;
+
+            do {
+                numeral = element % 10;
+                if (numeral % 2 == 0)
+                {
+                    evensNum++;
+                }
+                else
+                {
+                    oddNums++;
+                }
+                element /= 10;
+            }while (element != 0);
+
+            if (oddNums == 0) evenNumerals++;
+            if (evensNum == oddNums) symmetricalNumerals++;
+        }
+
+        System.out.println("Количество чисел, содержащих только четные цифры: " + evenNumerals);
+        System.out.println("Количество чисел, с равным числом четных и нечетных цифр: " + symmetricalNumerals);
+    }
+
     public static void main(String[] args)
     {
         System.out.print("Напишите сколько чисел вы будете вводить: ");
@@ -197,6 +230,11 @@ public class OptionalTask2 {
         //Task 3
         System.out.println("Task 3");
         task3(numbers);
+        System.out.println();
+
+        //Task 5
+        System.out.println("Task 5");
+        task5(numbers);
         System.out.println();
     }
 }
