@@ -4,18 +4,14 @@ import java.util.Scanner;
 
 public class OptionalTask2 {
 
-    public static int task1(int[] numbers)
+    public static int findMinLength(int[] numbers)
     {
-        int mostShort = numbers[0];
-        int mostLong = numbers[0];
-        int lengthShort = 0;
-        int lengthLong = 0;
         int temp = numbers[0];
+        int lengthMin = 0;
 
         do {
             temp /= 10;
-            lengthLong++;
-            lengthShort++;
+            lengthMin++;
         }while (temp != 0);
 
         for (int i = 1; i < numbers.length; i++)
@@ -28,30 +24,81 @@ public class OptionalTask2 {
                 length++;
             }while (element != 0);
 
-            if (length < lengthShort)
+            if (length < lengthMin)
             {
-                lengthShort = length;
+                lengthMin = length;
+            }
+        }
+
+        return lengthMin;
+    }
+
+    public static int findMaxLength(int[] numbers)
+    {
+        int temp = numbers[0];
+        int lengthMax = 0;
+
+        do {
+            temp /= 10;
+            lengthMax++;
+        }while (temp != 0);
+
+        for (int i = 1; i < numbers.length; i++)
+        {
+            int element = numbers[i];
+            int length = 0;
+
+            do {
+                element /= 10;
+                length++;
+            }while (element != 0);
+
+            if (length > lengthMax)
+            {
+                lengthMax = length;
+            }
+        }
+
+        return lengthMax;
+    }
+
+    public static void task1(int[] numbers)
+    {
+        int mostShort = numbers[0];
+        int mostLong = numbers[0];
+        int lengthMin = findMinLength(numbers);
+        int lengthMax = findMaxLength(numbers);
+
+        for (int i = 1; i < numbers.length; i++)
+        {
+            int element = numbers[i];
+            int length = 0;
+
+            do {
+                element /= 10;
+                length++;
+            }while (element != 0);
+
+            if (length == lengthMin)
+            {
                 mostShort = numbers[i];
             }
 
-            if (length > lengthLong)
+            if (length == lengthMax)
             {
-                lengthLong = length;
                 mostLong = numbers[i];
             }
         }
 
-        System.out.println("Самое короткое число: " + mostShort + ". Его длина: " + lengthShort);
-        System.out.println("Самое длинное число: " + mostLong + ". Его длина: " + lengthLong);
-
-        return lengthShort;
+        System.out.println("Самое короткое число: " + mostShort + ". Его длина: " + lengthMin);
+        System.out.println("Самое длинное число: " + mostLong + ". Его длина: " + lengthMax);
     }
 
-    public static void task2(int[] numbers, int lengthUsed)
+    public static void task2(int[] numbers)
     {
         int[] lengths = new int[numbers.length];
+        int lengthUsed = findMinLength(numbers);
         int lengthMin = lengthUsed;
-        int lengthNext = lengthUsed;
 
         for (int i = 0; i < numbers.length; i++) {
             int element = numbers[i];
@@ -109,12 +156,12 @@ public class OptionalTask2 {
 
         //Task 1
         System.out.println("Task 1");
-        int lengthMin = task1(numbers);
+        task1(numbers);
         System.out.println();
 
         //Task 2
         System.out.println("Task 2");
-        task2(numbers, lengthMin);
+        task2(numbers);
         System.out.println();
     }
 }
