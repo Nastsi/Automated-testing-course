@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a272e7c0-669b-4157-915b-39756442466d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beetsoft/automated/JavaFundamentals/OptionalTask2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beetsoft/automated/JavaFundamentals/OptionalTask2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/beetsoft/automated/JavaFundamentals/OptionalTask3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -53,11 +54,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/beetsoft/automated/JavaFundamentals/OptionalTask2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="196" column="34" lean-forward="true" selection-start-line="196" selection-start-column="34" selection-end-line="196" selection-end-column="34" />
+            <state relative-caret-position="68">
+              <caret line="206" column="4" selection-start-line="206" selection-start-column="4" selection-end-line="238" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/beetsoft/automated/JavaFundamentals/OptionalTask3.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -91,6 +101,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/beetsoft/automated/JavaFundamentals/LearnMain.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/beetsoft/automated/JavaFundamentals/OptionalTask1.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/beetsoft/automated/JavaFundamentals/OptionalTask2.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/beetsoft/automated/JavaFundamentals/OptionalTask3.java" />
       </list>
     </option>
   </component>
@@ -185,7 +196,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.OptionalTask2">
+  <component name="RunManager" selected="Application.OptionalTask3">
     <configuration name="AppTest" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.beetsoft.automated.AppTest" />
       <module name="Automated-testing-course" />
@@ -232,6 +243,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="OptionalTask3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.beetsoft.automated.JavaFundamentals.OptionalTask3" />
+      <module name="Automated-testing-course" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.beetsoft.automated.JavaFundamentals.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AppTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Automated-testing-course" />
       <extension name="coverage">
@@ -255,9 +279,11 @@
       <item itemvalue="Application.OptionalTask1" />
       <item itemvalue="Application.OptionalTask2" />
       <item itemvalue="JUnit.AppTest" />
+      <item itemvalue="Application.OptionalTask3" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.OptionalTask3" />
         <item itemvalue="Application.OptionalTask2" />
         <item itemvalue="Application.OptionalTask1" />
         <item itemvalue="Application.OptionalTask" />
@@ -311,8 +337,8 @@
       <window_info id="Favorites" order="6" sideWeight="0.502439" side_tool="true" weight="0.24962178" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.24702059" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3997833" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.36619717" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3289689" />
@@ -376,6 +402,60 @@
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/beetsoft/automated/JavaFundamentals/OptionalTask3.java</url>
+          <line>11</line>
+          <properties />
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/beetsoft/automated/JavaFundamentals/OptionalTask3.java</url>
+          <line>13</line>
+          <properties />
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/beetsoft/automated/JavaFundamentals/OptionalTask3.java</url>
+          <line>15</line>
+          <properties />
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/beetsoft/automated/JavaFundamentals/OptionalTask3.java</url>
+          <line>16</line>
+          <properties />
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/beetsoft/automated/JavaFundamentals/OptionalTask3.java</url>
+          <line>18</line>
+          <properties />
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/beetsoft/automated/JavaFundamentals/OptionalTask3.java</url>
+          <line>20</line>
+          <properties />
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/beetsoft/automated/JavaFundamentals/OptionalTask3.java</url>
+          <line>22</line>
+          <properties />
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/beetsoft/automated/JavaFundamentals/OptionalTask3.java</url>
+          <line>23</line>
+          <properties />
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Automated_testing_course$OptionalTask.ic" NAME="OptionalTask Coverage Results" MODIFIED="1560415279423" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.beetsoft.automated.JavaFundamentals.*</FILTER>
@@ -412,8 +492,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/beetsoft/automated/JavaFundamentals/OptionalTask2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="196" column="34" lean-forward="true" selection-start-line="196" selection-start-column="34" selection-end-line="196" selection-end-column="34" />
+        <state relative-caret-position="68">
+          <caret line="206" column="4" selection-start-line="206" selection-start-column="4" selection-end-line="238" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beetsoft/automated/JavaFundamentals/OptionalTask3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
         </state>
       </provider>
     </entry>
