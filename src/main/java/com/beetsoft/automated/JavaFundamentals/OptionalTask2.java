@@ -62,6 +62,25 @@ public class OptionalTask2 {
         return lengthMax;
     }
 
+    public static int[] calculatingLengthArray(int[] numbers)
+    {
+        int[] lengths = new int[numbers.length];
+
+        for (int i = 0; i < numbers.length; i++) {
+            int element = numbers[i];
+            int length = 0;
+
+            do {
+                element /= 10;
+                length++;
+            } while (element != 0);
+
+            lengths[i] = length;
+        }
+
+        return lengths;
+    }
+
     public static void task1(int[] numbers)
     {
         int mostShort = numbers[0];
@@ -96,21 +115,9 @@ public class OptionalTask2 {
 
     public static void task2(int[] numbers)
     {
-        int[] lengths = new int[numbers.length];
+        int[] lengths = calculatingLengthArray(numbers);
         int lengthUsed = findMinLength(numbers);
         int lengthMin = lengthUsed;
-
-        for (int i = 0; i < numbers.length; i++) {
-            int element = numbers[i];
-            int length = 0;
-
-            do {
-                element /= 10;
-                length++;
-            } while (element != 0);
-
-            lengths[i] = length;
-        }
 
         System.out.print("Числа в порядке возрастания их длины: ");
         int i = 0;
@@ -139,6 +146,29 @@ public class OptionalTask2 {
                 if (lengths[j] > lengthUsed && lengths[j] < lengthMin) lengthMin = lengths[j];
             }
         }while (i < numbers.length);
+        System.out.println();
+    }
+
+    public static void task3(int[] numbers)
+    {
+        int[] lengths = calculatingLengthArray(numbers);
+        double averageDouble = 0;
+
+        for (int i = 0; i < lengths.length; i++)
+        {
+            averageDouble += lengths[i];
+        }
+        averageDouble /= lengths.length;
+        long average = Math.round(averageDouble);
+
+        System.out.println("Средняя длина чисел: " + average);
+        System.out.println("Числа, длина которых меньше средней длины по всем числам: ");
+
+        for (int i = 0; i < numbers.length; i++)
+        {
+            if (lengths[i] < average) System.out.print(numbers[i] + " ");
+        }
+        System.out.println();
     }
 
     public static void main(String[] args)
@@ -162,6 +192,11 @@ public class OptionalTask2 {
         //Task 2
         System.out.println("Task 2");
         task2(numbers);
+        System.out.println();
+
+        //Task 3
+        System.out.println("Task 3");
+        task3(numbers);
         System.out.println();
     }
 }
