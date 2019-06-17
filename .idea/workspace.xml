@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a272e7c0-669b-4157-915b-39756442466d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beetsoft/automated/JavaFundamentals/OptionalTask4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beetsoft/automated/JavaFundamentals/OptionalTask4.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/beetsoft/automated/JavaFundamentals/MainTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -71,14 +72,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/beetsoft/automated/JavaFundamentals/OptionalTask4.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-667">
-              <caret line="55" column="92" selection-start-line="55" selection-start-column="92" selection-end-line="55" selection-end-column="92" />
+            <state relative-caret-position="1030">
+              <caret line="105" column="55" lean-forward="true" selection-start-line="105" selection-start-column="55" selection-end-line="105" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/beetsoft/automated/JavaFundamentals/MainTask.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-245">
+              <caret line="77" column="26" selection-start-line="77" selection-start-column="26" selection-end-line="77" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -97,6 +107,7 @@
     <findStrings>
       <find>maven-surefire-plugin</find>
       <find>ran</find>
+      <find>ingridients</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -115,6 +126,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/beetsoft/automated/JavaFundamentals/OptionalTask2.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/beetsoft/automated/JavaFundamentals/OptionalTask3.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/beetsoft/automated/JavaFundamentals/OptionalTask4.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/beetsoft/automated/JavaFundamentals/MainTask.java" />
       </list>
     </option>
   </component>
@@ -347,7 +359,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.36619717" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3997833" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.40303358" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3289689" />
@@ -445,13 +457,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/beetsoft/automated/JavaFundamentals/OptionalTask3.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-425">
-          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/beetsoft/automated/JavaFundamentals/OptionalTask2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -459,13 +464,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beetsoft/automated/JavaFundamentals/OptionalTask3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-425">
+          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/beetsoft/automated/JavaFundamentals/OptionalTask4.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-667">
-          <caret line="55" column="92" selection-start-line="55" selection-start-column="92" selection-end-line="55" selection-end-column="92" />
+        <state relative-caret-position="1030">
+          <caret line="105" column="55" lean-forward="true" selection-start-line="105" selection-start-column="55" selection-end-line="105" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/beetsoft/automated/JavaFundamentals/MainTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-245">
+          <caret line="77" column="26" selection-start-line="77" selection-start-column="26" selection-end-line="77" selection-end-column="26" />
         </state>
       </provider>
     </entry>

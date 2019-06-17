@@ -8,3 +8,4 @@ build/
 .idea/
 doc/*.txt
 doc/**/*.pdf
+.idea/workspace.xml
