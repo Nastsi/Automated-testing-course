@@ -23,11 +23,6 @@ public class MainTask {
         private int clientNumber;
         private Pizza[] pizza;
 
-        Order()
-        {
-            this.pizza = new Pizza[10];
-        }
-
         Order(int orderNumber, int clientNumber)
         {
             this.orderNumber = orderNumber;
@@ -44,26 +39,119 @@ public class MainTask {
         {
             for (int i = 0; i < order.pizza.length; i++)
             {
-                if (order.pizza[i].pizzaName.compareTo(pizzaName) == 0)
+                if (order.pizza[i] != null)
                 {
-                    if (quantity != 0)
+                    if (order.pizza[i].pizzaName.compareTo(pizzaName) == 0)
                     {
-                        order.pizza[i].quantity = quantity;
-                        break;
-                    }
-                    else
-                    {
-                        for (int j = i; j < order.pizza.length; j++)
+                        if (quantity != 0)
                         {
-                            order.pizza[j].pizzaName = order.pizza[i].pizzaName;
-                            order.pizza[j].ingredients = order.pizza[i].ingredients;
-                            order.pizza[j].pizzaType = order.pizza[i].pizzaType;
-                            order.pizza[j].quantity = order.pizza[i].quantity;
+                            order.pizza[i].quantity = quantity;
+                            break;
+                        } else {
+                            for (int j = i; j < order.pizza.length; j++)
+                            {
+                                if (order.pizza[j] != null)
+                                {
+                                    order.pizza[j].pizzaName = order.pizza[i].pizzaName;
+                                    order.pizza[j].ingredients = order.pizza[i].ingredients;
+                                    order.pizza[j].pizzaType = order.pizza[i].pizzaType;
+                                    order.pizza[j].quantity = order.pizza[i].quantity;
+                                }
+                            }
+                            break;
                         }
-                        break;
                     }
                 }
             }
+        }
+
+        public String toString()
+        {
+            double costPizza = 0;
+            double totalCost = 0;
+
+            String receipt = "********************************\nЗаказ: " + this.orderNumber + "\nКлиент: " + this.clientNumber + "\n";
+            for (int i = 0; i < pizza.length; i++)
+            {
+                if (pizza[i] != null)
+                {
+                    costPizza = 0;
+                    receipt += "Название: " + pizza[i].pizzaName
+                                + "\n--------------------------------\n";
+
+                    if (pizza[i].pizzaType.compareTo("Calzone") != 0)
+                    {
+                        receipt += "Pizza Base                 1,00 €\n";
+                        costPizza += 1;
+                    }
+                    else
+                    {
+                        receipt += "Pizza Base (Calzone)       1,50 €\n";
+                        costPizza += 1.5;
+                    }
+
+                    for (int j = 0; j < pizza[i].ingredients.length; j++)
+                    {
+                        if (pizza[i].ingredients[j] != null)
+                        {
+                            receipt += pizza[i].ingredients[j];
+                            for (int p = 0; p < (27 - pizza[i].ingredients[j].length()); p++)
+                            {
+                                receipt += " ";
+                            }
+
+                            if (pizza[i].ingredients[j].compareTo(tomatoPaste) == 0)
+                            {
+                                receipt += "1,00 €\n";
+                                costPizza += 1;
+                            }
+                            else if (pizza[i].ingredients[j].compareTo(cheese) == 0)
+                            {
+                                receipt += "1,00 €\n";
+                                costPizza += 1;
+                            }
+                            else if (pizza[i].ingredients[j].compareTo(salami) == 0)
+                            {
+                                receipt += "1,50 €\n";
+                                costPizza += 1.5;
+                            }
+                            else if (pizza[i].ingredients[j].compareTo(bacon) == 0)
+                            {
+                                receipt += "1,20 €\n";
+                                costPizza += 1.2;
+                            }
+                            else if (pizza[i].ingredients[j].compareTo(garlic) == 0)
+                            {
+                                receipt += "0,30 €\n";
+                                costPizza += 0.3;
+                            }
+                            else if (pizza[i].ingredients[j].compareTo(corn) == 0)
+                            {
+                                receipt += "0,70 €\n";
+                                costPizza += 0.7;
+                            }
+                            else if (pizza[i].ingredients[j].compareTo(pepperoni) == 0)
+                            {
+                                receipt += "0,60 €\n";
+                                costPizza += 0.6;
+                            }
+                            else if (pizza[i].ingredients[j].compareTo(olives) == 0)
+                            {
+                                receipt += "0,50 €\n";
+                                costPizza += 0.5;
+                            }
+                        }
+                    }
+                    receipt += "--------------------------------\nВсего:                     " + String.format("%.2f", costPizza) + " €\n"
+                            + "Кол-во:                        " + pizza[i].quantity + "\n--------------------------------\n";
+                    totalCost += costPizza * pizza[i].quantity;
+                }
+            }
+
+            receipt += "Общая сумма:        ";
+            receipt += String.format("%.2f", totalCost) + " €\n********************************";
+
+            return receipt;
         }
     }
 
@@ -116,7 +204,7 @@ public class MainTask {
 
         if (name.length() < 4 || name.length() > 20)
         {
-            pizzaName = clientNumber + "_" + number;
+            pizzaName = clientNumber + "_" + (number + 1);
         }
         else pizzaName = name;
 
@@ -142,11 +230,13 @@ public class MainTask {
         int quantity;
 
         do {
+            System.out.println();
             System.out.println("Do you want to add pizza to your order? Y/N");
             answerAddPizza = in.next();
 
             if (answerAddPizza.compareTo("Y") == 0)
             {
+                ingredientNumber = 0;
                 pizzaNumber++;
                 order.pizza[pizzaNumber] = new Pizza();
                 do {
@@ -209,14 +299,20 @@ public class MainTask {
                 }while(answer.compareTo("N") != 0);
 
                 System.out.println();
-                System.out.println("Enter your pizza's name: ");
+                System.out.print("Enter your pizza's name: ");
                 pizzaName = in.next();
                 order.pizza[pizzaNumber].pizzaName = checkPizzaName(pizzaName, clientNumber, pizzaNumber);
+                System.out.println();
+                System.out.print("Enter type of pizza. Ordinary or Calzone: ");
+                order.pizza[pizzaNumber].pizzaType = in.next();
+                System.out.println();
+                System.out.print("Enter quantity of pizza: ");
+                order.pizza[pizzaNumber].quantity = in.nextInt();
             }
         }while(answerAddPizza.compareTo("N") != 0);
 
         System.out.println("Do you want to change quantity of your pizzas? Y/N");
-        answer = in.nextLine();
+        answer = in.next();
         System.out.println();
 
         if (answer == "Y") {
@@ -227,5 +323,7 @@ public class MainTask {
             quantity = in.nextInt();
             order.changeQuantity(order, pizzaName, quantity);
         }
+
+        System.out.print(order.toString());
     }
 }
