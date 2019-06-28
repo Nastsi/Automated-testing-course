@@ -1,4 +1,5 @@
 package com.beetsoft.automated.JavaFundamentals;
+import static java.lang.System.out;
 
 
 import java.util.Scanner;
@@ -67,7 +68,7 @@ public class MainTask {
 
         public String toString()
         {
-            double costPizza = 0;
+            double costPizza;
             double totalCost = 0;
 
             String receipt = "********************************\nЗаказ: " + this.orderNumber + "\nКлиент: " + this.clientNumber + "\n";
@@ -161,14 +162,6 @@ public class MainTask {
         private String[] ingredients;
         private String pizzaType;
         private int quantity;
-
-        Pizza(String pizzaName, String pizzaType, int quantity)
-        {
-            this.pizzaName = pizzaName;
-            this.ingredients = new String[7];
-            this.pizzaType = pizzaType;
-            this.quantity = quantity;
-        }
 
         Pizza()
         {
