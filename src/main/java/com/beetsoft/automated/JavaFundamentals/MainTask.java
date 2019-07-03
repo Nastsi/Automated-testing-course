@@ -33,7 +33,7 @@ public class MainTask {
 
         public void showPizzaAttribute(int number)
         {
-            System.out.print("[" + orderNumber + " : " + clientNumber + " : " + pizza[number].pizzaName + " : "  + pizza[number].quantity + "]");
+            out.print("[" + orderNumber + " : " + clientNumber + " : " + pizza[number].pizzaName + " : "  + pizza[number].quantity + "]");
         }
 
         public void changeQuantity(Order order, String pizzaName, int quantity)
